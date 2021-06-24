@@ -1,0 +1,63 @@
+
+
+
+<div class="row">
+  <div class="col-sm-6">
+    <h1>Jobs</h1>
+  </div>
+
+  <div class="col-sm-6 text-right">
+  <%= link_to new_job_path, class: 'btn btn-primary' do %>
+    Add New Job
+  <% end %>
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+    
+
+            <th>Title</th>
+            <th>Link to apply</th>
+            <th>Description</th>
+            <th>Company name</th>
+            <th>Company website</th>
+            <th>Company description</th>
+            <th>Role type</th>
+            <th>Compensation range</th>
+            <th>Remote</th>
+            <th>Years of experience</th>
+            <th>User</th>
+            
+          <th></th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @jobs.each do |job| %>
+        <%= content_tag :tr, id: dom_id(job), class: dom_class(job) do %>
+          
+
+                      <td><%= job.title %></td>
+                      <td><%= job.link_to_apply %></td>
+                      <td><%= job.description %></td>
+                      <td><%= job.company_name %></td>
+                      <td><%= job.company_website %></td>
+                      <td><%= job.company_description %></td>
+                      <td><%= job.role_type %></td>
+                      <td><%= job.compensation_range %></td>
+                      <td><%= job.remote %></td>
+                      <td><%= job.years_of_experience %></td>
+                      <td><%= job.user %></td>
+          
+          
+            <td><%= link_to 'Show', job %></td>
+          
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

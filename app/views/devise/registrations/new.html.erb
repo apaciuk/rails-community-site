@@ -9,6 +9,17 @@
         <%= f.text_field :name, autofocus: false, class: 'form-control', placeholder: "Full Name" %>
       </div>
 
+       <h4>Roles</h4>
+       <div class="mb-3">
+        <%= f.label :developer, "Use railsdevs as a developer", class: 'form-control' %>
+        <%= f.check_box :developer %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :employer, "Use railsdevs as an employer", class: 'form-control' %>
+        <%= f.check_box :employer %>
+      </div>
+
       <div class="mb-3">
         <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: "Email Address" %>
       </div>

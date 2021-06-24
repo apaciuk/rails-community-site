@@ -37,7 +37,8 @@
     <!-- Section: Social media -->
 
     <!-- Section: Form -->
-    <section class="">
+    <section class="subscribe">
+      <%= form_with(model: @subscribe, local: true) do |f| %>
       <form action="">
         <!--Grid row-->
         <div class="row d-flex justify-content-center">
@@ -53,8 +54,8 @@
           <div class="col-md-5 col-12">
             <!-- Email input -->
             <div class="form-outline form-white mb-4">
-              <input type="email" id="form5Example2" class="form-control" />
-              <label class="form-label" for="form5Example2">Email address</label>
+              <input type="email" id="subscribe" class="form-control" />
+              <label class="form-label" for="subscribe">Email address</label>
             </div>
           </div>
           <!--Grid column-->
@@ -71,7 +72,8 @@
         <!--Grid row-->
       </form>
     </section>
-    <!-- Section: Form -->
+    <% end %>
+
 
     <!-- Section: Text -->
     <section class="mb-4">
@@ -89,7 +91,7 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2020 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">Rails Community Site</a>
+    <a class="text-white" href="https://www.xhostcom.com/">Rails Community Site</a>
   </div>
   <!-- Copyright -->
 </footer>

@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :jobs
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   get '/forum', to: 'simple_discussion/forum_threads#index'

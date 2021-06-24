@@ -1,0 +1,84 @@
+<%= form_with(model: job, local: true) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :link_to_apply, class: 'form-label' %>
+    <%= form.text_field :link_to_apply, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.rich_text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :company_name, class: 'form-label' %>
+    <%= form.text_field :company_name, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :company_website, class: 'form-label' %>
+    <%= form.text_field :company_website, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :company_description, class: 'form-label' %>
+    <%= form.rich_text_area :company_description, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :role_type, class: 'form-label' %>
+    <%= form.text_field :role_type, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :compensation_range, class: 'form-label' %>
+    <%= form.text_field :compensation_range, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :remote, class: 'form-label' %>
+    <%= form.check_box :remote, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :years_of_experience, class: 'form-label' %>
+    <%= form.text_field :years_of_experience, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :user_id, class: 'form-label' %>
+    <%= form.text_field :user_id, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <% if job.persisted? %>
+      <div class="float-right">
+        <%= link_to 'Destroy', job, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if job.persisted? %>
+      <%= link_to "Cancel", job, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", jobs_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>
