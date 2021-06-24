@@ -68,3 +68,8 @@ gem 'redis', '~> 4.2', '>= 4.2.2'
 gem 'sidekiq', '~> 6.2'
 gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
 gem 'whenever', require: false
+gem "annotate", "~> 3.1"
+
+gem "faker", "~> 2.18"
+
+gem "simple_discussion", "~> 1.3"

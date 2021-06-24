@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/terms', to: 'home#terms'
 authenticate :user, lambda { |u| u.admin? } do
   mount Sidekiq::Web => '/sidekiq'
+  mount SimpleDiscussion::Engine => "/forum"
 
   namespace :madmin do
   end
