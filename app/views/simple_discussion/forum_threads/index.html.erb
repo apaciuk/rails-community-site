@@ -1,3 +1,4 @@
+<div class="container mt-5 mb-5">
 <% if @forum_threads.none? %>
 
     <div><%= t('search_not_found') %>. <%= t('check_out') %> <%= link_to t('latest_questions'), simple_discussion.forum_threads_path %> <%= t('instead') %> </div>
@@ -11,3 +12,4 @@
   </div>
 
 <% end %>
+</div>
