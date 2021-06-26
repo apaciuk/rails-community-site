@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_24_190725) do
+ActiveRecord::Schema.define(version: 2021_06_26_161739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,11 +108,20 @@ ActiveRecord::Schema.define(version: 2021_06_24_190725) do
     t.string "link_to_apply"
     t.string "company_name"
     t.string "company_website"
+    t.string "headquarters"
     t.string "role_type"
     t.string "compensation_range"
+    t.string "compensation_type"
+    t.string "upsell_type"
     t.boolean "remote"
     t.string "years_of_experience"
-    t.bigint "user_id", null: false
+    t.string "status", default: "pending"
+    t.datetime "published_at"
+    t.datetime "featured_until"
+    t.boolean "featured", default: false
+    t.integer "estimated_hours"
+    t.integer "price"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_jobs_on_user_id"
@@ -170,6 +179,5 @@ ActiveRecord::Schema.define(version: 2021_06_24_190725) do
   add_foreign_key "forum_subscriptions", "users"
   add_foreign_key "forum_threads", "forum_categories"
   add_foreign_key "forum_threads", "users"
-  add_foreign_key "jobs", "users"
   add_foreign_key "services", "users"
 end

@@ -53,7 +53,7 @@
 
   <div class="mb-3">
     <%= form.label :remote, class: 'form-label' %>
-    <%= form.check_box :remote, class: 'form-control' %>
+    <%= form.select :remote, options_for_select([true, false]), class: 'form-control' %>
   </div>
 
   <div class="mb-3">

@@ -1,16 +1,13 @@
 User.delete_all
 Job.delete_all
 
-admin = User.new(email: "andy@web-crunch.com", password: "password", password_confirmation: "password", admin: true, developer: true, employer: true)
-admin.skip_confirmation!
+admin = User.new(email: "xhostcom@gmail.com", password: "password", password_confirmation: "password", admin: true, developer: true, employer: true)
 admin.save
 
-developer = User.new(email: "developer@web-crunch.com", password: "password", password_confirmation: "password", admin: false, developer: true, employer: false)
-developer.skip_confirmation!
+developer = User.new(email: "xhostcom@gmail.com", password: "password", password_confirmation: "password", admin: false, developer: true, employer: false)
 developer.save
 
-employer = User.new(email: "employer@web-crunch.com", password: "password", password_confirmation: "password", admin: false, developer: false, employer: true)
-employer.skip_confirmation!
+employer = User.new(email: "employer@gmail.com", password: "password", password_confirmation: "password", admin: false, developer: false, employer: true)
 employer.save
 
 Job.create!(

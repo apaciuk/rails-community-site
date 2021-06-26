@@ -71,5 +71,4 @@ class Job < ApplicationRecord
       false
     end
   end
-
 end
