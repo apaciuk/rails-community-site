@@ -1,97 +1,24 @@
-  <!-- Footer -->
-<footer class="bg-dark text-center text-white">
-  <!-- Grid container -->
-  <div class="text-center p-3">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-facebook-f"></i
-      ></a>
+ <footer class="text-center text-white mt-4" style="background-color: #473884">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: CTA -->
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Register on RailsCom for free</span>
+           <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-outline-light btn-rounded" %>
+         
+        </p>
+      </section>
+      <!-- Section: CTA -->
+    </div>
+    <!-- Grid container -->
 
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-twitter"></i
-      ></a>
+    <!-- Copyright -->
+    <div class="text-center p-2 mt-1" style="background-color: rgba(0, 0, 0, 0.2);">
+      <%= link_to image_tag('logo-footer.png'), root_path %>
 
-      <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-google"></i
-      ></a>
+    </div>
+ 
+    <!-- Copyright -->
+  </footer>
 
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Form -->
-    <section class="subscribe">
-      <%= form_with(model: @subscribe, local: true) do |f| %>
-      <form action="">
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-          <!--Grid column-->
-          <div class="col-auto">
-            <p class="pt-2">
-              <strong>Sign up for our newsletter</strong>
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-5 col-12">
-            <!-- Email input -->
-            <div class="form-outline form-white mb-4">
-              <input type="email" id="subscribe" class="form-control" />
-              <label class="form-label" for="subscribe">Email address</label>
-            </div>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-auto">
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-outline-light mb-4">
-              Subscribe
-            </button>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </form>
-    </section>
-    <% end %>
-
-
-    <!-- Section: Text -->
-    <section class="mb-4">
-      <p>
-        Awesome Rails Community Board with Bootstrap 5, Devise, Forum, Discussions, and a ton of other goodies.
-        Subscribe above for updates and notifications!
-      </p>
-    </section>
-    <!-- Section: Text -->
-
-   
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
-    <a class="text-white" href="https://www.xhostcom.com/">Rails Community Site</a>
-  </div>
-  <!-- Copyright -->
-</footer>

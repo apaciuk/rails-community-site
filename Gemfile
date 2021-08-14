@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.3'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4'
@@ -70,6 +70,6 @@ gem 'sitemap_generator', '~> 6.1', '>= 6.1.2'
 gem 'whenever', require: false
 gem "annotate", "~> 3.1"
 
-gem "faker", "~> 2.18"
+
 
 gem "simple_discussion", "~> 1.3"

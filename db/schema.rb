@@ -159,13 +159,17 @@ ActiveRecord::Schema.define(version: 2021_06_26_161739) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet "current_sign_in_ip"
+    t.inet "last_sign_in_ip"
     t.string "first_name"
     t.string "last_name"
     t.datetime "announcements_last_read_at"
     t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "moderator", default: false
     t.boolean "developer", default: false
     t.boolean "employer", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
